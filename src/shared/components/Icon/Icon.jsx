@@ -1,10 +1,10 @@
 import icons from '../../../assets/Icon/sprite.svg';
 
 // eslint-disable-next-line react/prop-types
-export const Icon = ({ iconName, width, height }) => {
+export const Icon = ({ iconName, width, height, stroke, fill }) => {
   return (
-    <svg width={width || 20} height={height || 20}>
-      <use href={`${icons}#${iconName}`} />
+    <svg width={width} height={height}>
+      <use href={`${icons}#${iconName}`} stroke={stroke} fill={fill} />
     </svg>
   );
 };

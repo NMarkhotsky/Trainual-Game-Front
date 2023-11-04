@@ -4,12 +4,12 @@ export const GlobalStyle = createGlobalStyle`
 
 body {
 
-  
+  font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeSpeed;
 
-
+  background-color: #F9F9F9;
 }
 
 code {

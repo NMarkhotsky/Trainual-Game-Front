@@ -8,6 +8,7 @@ export const AppRoutes = () => {
     <>
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
+          <Route path="/" element={<LoginPage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
