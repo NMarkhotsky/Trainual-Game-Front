@@ -1,11 +1,12 @@
 import { AppRoutes } from '../../routes/AppRoutes';
+import { Main } from './SharedLayout.styled';
 
 export const SharedLayout = () => {
   return (
     <>
-      <main>
+      <Main>
         <AppRoutes />
-      </main>
+      </Main>
     </>
   );
 };
