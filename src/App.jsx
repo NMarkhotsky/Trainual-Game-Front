@@ -1,9 +1,9 @@
-import './App.css';
+import { SharedLayout } from './components/SharedLayout/SharedLayout';
 
 function App() {
   return (
     <>
-      <h1>Trainual Game</h1>
+      <SharedLayout />
     </>
   );
 }
