@@ -4,9 +4,9 @@ import react from '@vitejs/plugin-react';
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  base: '/',
+  base: '/Trainual-Game-Front',
   server: {
-    open: '/',
+    open: '/Trainual-Game-Front',
     port: 3000,
   },
 });
