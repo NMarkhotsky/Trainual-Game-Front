@@ -1,12 +1,18 @@
+import {
+  ModalContainer,
+  ModalSubTitle,
+  ModalTitle,
+} from './ModalLeaveRoom.styled';
+
 export const ModalLeaveRoom = () => {
   return (
-    <div>
-      <h2>Leave room</h2>
-      <p>
+    <ModalContainer>
+      <ModalTitle>Leave room</ModalTitle>
+      <ModalSubTitle>
         Lorem ipsum dolor sit amet consectetur. Vestibulum pellentesque viverra
         nulla leo magna diam pellentesque pellentesque. Lectus quis nisl quam
         magna sed sed fames.
-      </p>
-    </div>
+      </ModalSubTitle>
+    </ModalContainer>
   );
 };
