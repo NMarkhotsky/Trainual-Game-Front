@@ -10,15 +10,18 @@ import {
   Content,
   Modal,
 } from './ModalWrapper.styled';
+import { useNavigate } from 'react-router';
 
 const modalRoot = document.querySelector('#modal-root');
 
 export const ModalWrapper = ({ children, onClose }) => {
-  // document.body.style.overflow = 'hidden';
+  document.body.style.overflow = 'hidden';
+
+  const navigate = useNavigate();
 
   const handleClose = useCallback(
     ({ target, currentTarget, code }) => {
-      // document.body.style.overflow = 'visible';
+      document.body.style.overflow = 'visible';
 
       if (target === currentTarget || code === 'Escape') {
         onClose();
@@ -46,7 +49,12 @@ export const ModalWrapper = ({ children, onClose }) => {
           <ButtonCancel type="button" onClick={onClose}>
             Cancel
           </ButtonCancel>
-          <ButtonCreate type="button">Create</ButtonCreate>
+          <ButtonCreate
+            type="button"
+            onClick={() => navigate('/dashboard/table')}
+          >
+            Create
+          </ButtonCreate>
         </ButtonWrapper>
       </Modal>
     </BackDrop>,

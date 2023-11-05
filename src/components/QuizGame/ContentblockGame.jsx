@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router';
 import { Icon } from '../../shared/components/Icon/Icon';
 import {
   ContentblockGame,
@@ -33,7 +34,6 @@ import {
 } from './ContentblockGame.styled';
 import { ModalWrapper } from '../../shared/components/ModalWrapper/ModalWrapper';
 import { ModalCreateRoom } from '../ModalCreateRoom/ModalCreateRoom';
-import { useNavigate } from 'react-router';
 
 export const QuizGame = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -73,9 +73,7 @@ export const QuizGame = () => {
 
                 {isOpen && activeMenu === 'createQuest' && (
                   <GameHeaderBtnCreateQuesMenu>
-                    <GameHeaderBtnCreateQuesMenuTitle
-                      onClick={() => setShowModal(true)}
-                    >
+                    <GameHeaderBtnCreateQuesMenuTitle>
                       <div>
                         <Icon
                           iconName="icon-plus"
@@ -104,7 +102,9 @@ export const QuizGame = () => {
                 )}
               </GameHeaderBtnCreateQuestIcon>
             </GameHeaderBtnCreateQuest>
-            <GameHeaderBtnCreateRoom>Create a room</GameHeaderBtnCreateRoom>
+            <GameHeaderBtnCreateRoom onClick={() => setShowModal(true)}>
+              Create a room
+            </GameHeaderBtnCreateRoom>
           </ContentblockGameHeaderBtn>
         </ContentblockGameHeader>
         <GameWindowInfo>
