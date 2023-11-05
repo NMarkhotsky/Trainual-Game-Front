@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import bgd from '../../assets/img/game.png'
 
 export const BlockGame = styled.div`
   display: flex;
@@ -9,6 +10,17 @@ export const BlockGame = styled.div`
 export const BlockGameTable = styled.div`
   width: 100%;
 `;
+
+
+export const BlockGameTableGm = styled.div`
+width: 100%;
+height: 100vh;
+    background: url(${bgd}) no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: top;
+`;
+
 
 export const BlockGameTableHeader = styled.div`
   display: flex;

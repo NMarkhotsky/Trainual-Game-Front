@@ -5,6 +5,7 @@ import {
   BlockGameChatHeaderText,
   BlockGameChatMessage,
   BlockGameTable,
+  BlockGameTableGm,
   BlockGameTableHeader,
   BlockGameTableHeaderNumber,
   BlockGameTableHeaderNumberbg,
@@ -39,12 +40,16 @@ export const TableGame = () => {
               </BlockGameTableHeaderNumberbg>
             </BlockGameTableHeaderNumber>
           </BlockGameTableHeader>
+
+          <BlockGameTableGm></BlockGameTableGm>
+
+
         </BlockGameTable>
         <BlockGameChat>
           <BlockGameChatHeader>
             <BlockGameChatHeaderText>Game chat</BlockGameChatHeaderText>
             <button>
-              <Icon iconName="icon-question" width={24} height={24} />
+              <Icon iconName="icon-logout" width={24} height={24} />
             </button>
           </BlockGameChatHeader>
 
@@ -86,9 +91,9 @@ export const TableGame = () => {
             </MessageText>
 
             <MessageStyleBlockBtnInput>
-              <div><Icon iconName="icon-question" width={24} height={24} /></div>
+              <div><Icon iconName="icon-mic" width={24} height={24} /></div>
               <MessageStylesInput type="text" />
-              <button><Icon iconName="icon-question" width={24} height={24} /></button>
+              <button><Icon iconName="icon-send" width={24} height={24} /></button>
             </MessageStyleBlockBtnInput>
           </BlockGameChatMessage>
         </BlockGameChat>
