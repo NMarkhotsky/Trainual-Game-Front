@@ -29,6 +29,10 @@ import {
   GameHeaderBtnCreateQuestIcon,
   GameHeaderBtnCreateRoom,
   GameWindowInfo,
+  GameWindowInfoClose,
+  GameWindowInfoText,
+  GameWindowInfoTextH3,
+  GameWindowInfoTextSubtext,
   Header,
   IconInfo,
   IconMessage,
@@ -46,22 +50,16 @@ import logoFotter from "../../assets/img/powered-by-trainual.svg";
 import React, { useState } from "react";
 
 export const DashboardPage = () => {
-  // const [isOpen, setIsOpen] = useState(false);
-
-  // const toggleAccordion = () => {
-  //   setIsOpen(!isOpen);
-  // };
-
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
 
   const handleToggleMenu = (menu) => {
     if (activeMenu === menu) {
       setActiveMenu(null);
-      setIsOpen(false); // Закрити меню
+      setIsOpen(false);
     } else {
       setActiveMenu(menu);
-      setIsOpen(true); // Відкрити меню
+      setIsOpen(true);
     }
   };
 
@@ -332,6 +330,7 @@ export const DashboardPage = () => {
                             </div>
                             Create
                           </GameHeaderBtnCreateQuesMenuTitle>
+
                           <GameHeaderBtnCreateQuesMenuTitle>
                             <div>
                               <Icon
@@ -352,23 +351,24 @@ export const DashboardPage = () => {
                   </GameHeaderBtnCreateRoom>
                 </ContentblockGameHeaderBtn>
               </ContentblockGameHeader>
-
               <GameWindowInfo>
-                <h3>Quiz</h3>
-                <p>
-                  is a game in which players are offered questions on various
-                  topics about the company. Players compete for the correct
-                  answers, trying to score as many points as possible.
-                </p>
+                <GameWindowInfoText>
+                  <GameWindowInfoTextH3>Quiz</GameWindowInfoTextH3>
+                  <GameWindowInfoTextSubtext>
+                    is a game in which players are offered questions on various
+                    topics about the company. Players compete for the correct
+                    answers, trying to score as many points as possible.
+                  </GameWindowInfoTextSubtext>
+                </GameWindowInfoText>
 
-                <div>
+                <GameWindowInfoClose>
                   <Icon
                     iconName="icon-cross"
                     width={15}
                     height={20}
                     fill={"black"}
                   />
-                </div>
+                </GameWindowInfoClose>
               </GameWindowInfo>
               content
             </ContentblockGame>

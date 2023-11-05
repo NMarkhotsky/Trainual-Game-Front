@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import background from "../../assets/img/Background.png";
 
 export const Main = styled.main`
   width: 100%;
@@ -351,6 +352,7 @@ export const GameHeaderBtnCreateQuesMenu = styled.div`
   border: 1px solid #e3e3e3;
   background: #fff;
   box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.05);
+  z-index: 30;
 `;
 
 export const GameHeaderBtnCreateQuesMenuTitle = styled.div`
@@ -377,27 +379,55 @@ export const GameHeaderBtnCreateRoom = styled.button`
   color: white;
 `;
 
-
 export const GameWindowInfo = styled.div`
-width: 100%;
-height: 200px;
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background: url(${background}) no-repeat;
+  background-size: cover;
+  background-position-x: right;
+  background-position-y: center;
+  margin-top: 16px;
 
-
-background: url('../../assets/img/Background.png') no-repeat;
-background-size: contain;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
 `;
 
+export const GameWindowInfoText = styled.div`
+  display: flex;
+  max-width: 602px;
+  width: 100%;
+  padding: 24px 40px;
+  flex-direction: column;
+  align-items: flex-start;
+`;
 
+export const GameWindowInfoTextH3 = styled.h3`
+  color: #2a2a2a;
+  font-family: Poppins;
+  font-size: 28.8px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 36px;
+`;
 
+export const GameWindowInfoTextSubtext = styled.p`
+max-width: 457px;
+color: #2A2A2A;
+font-family: Poppins;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 157.143% */
+`;
 
-
-
-
-
-
-
-
-
+export const GameWindowInfoClose = styled.button`
+  position: absolute;
+  top: 8px;
+  right: 8px;
+`;
 
 export const Footter = styled.footer`
   display: flex;
