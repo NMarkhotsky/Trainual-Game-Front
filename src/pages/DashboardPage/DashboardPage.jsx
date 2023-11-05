@@ -1,4 +1,4 @@
-import { Icon } from "../../shared/components/Icon/Icon";
+import { Icon } from '../../shared/components/Icon/Icon';
 import {
   BlockBtn,
   BlockBtnAcordionGame,
@@ -44,14 +44,18 @@ import {
   Nav,
   Search,
   Section,
-} from "./DashboardPage.styled";
-import logo from "../../assets/logo.png";
-import logoFotter from "../../assets/img/powered-by-trainual.svg";
-import React, { useState } from "react";
+} from './DashboardPage.styled';
+import logo from '../../assets/logo.png';
+import logoFotter from '../../assets/img/powered-by-trainual.svg';
+import { useState } from 'react';
+import { ModalWrapper } from '../../shared/components/ModalWrapper/ModalWrapper';
+import { ModalCreateRoom } from '../../components/ModalCreateRoom/ModalCreateRoom';
 
 export const DashboardPage = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedGame, setSelectedGame] = useState(false);
 
   const handleToggleMenu = (menu) => {
     if (activeMenu === menu) {
@@ -79,7 +83,7 @@ export const DashboardPage = () => {
                       iconName="icon-arrow"
                       width={14}
                       height={14}
-                      fill={"black"}
+                      fill={'black'}
                     />
                   </BtnOpenMenuIcon>
                 </BtnOpenMenu>
@@ -94,7 +98,7 @@ export const DashboardPage = () => {
                           iconName="icon-desk"
                           width={46}
                           height={46}
-                          fill={"black"}
+                          fill={'black'}
                         />
                       </BlockBtnIcon>
                       <p>My desk</p>
@@ -110,7 +114,7 @@ export const DashboardPage = () => {
                           iconName="icon-content"
                           width={46}
                           height={46}
-                          fill={"black"}
+                          fill={'black'}
                         />
                       </BlockBtnIcon>
                       <p>Content</p>
@@ -119,14 +123,14 @@ export const DashboardPage = () => {
                 </BlockMenuBtnAndAcordion>
 
                 <BlockMenuBtnAndAcordion>
-                  <BlockBtn onClick={() => handleToggleMenu("people")}>
+                  <BlockBtn onClick={() => handleToggleMenu('people')}>
                     <BlockBtnIconFlex>
                       <BlockBtnIconPadding>
                         <Icon
                           iconName="icon-people"
                           width={20}
                           height={20}
-                          fill={"black"}
+                          fill={'black'}
                         />
                       </BlockBtnIconPadding>
                       <p>People</p>
@@ -137,11 +141,11 @@ export const DashboardPage = () => {
                         iconName="icon-arrow"
                         width={16}
                         height={16}
-                        fill={"black"}
+                        fill={'black'}
                       />
                     </button>
                   </BlockBtn>
-                  {isOpen && activeMenu === "people" && (
+                  {isOpen && activeMenu === 'people' && (
                     <div>
                       <BlockBtnAcordionGame>test text</BlockBtnAcordionGame>
                       <BlockBtnAcordionGame>test text</BlockBtnAcordionGame>
@@ -157,7 +161,7 @@ export const DashboardPage = () => {
                           iconName="icon-groups"
                           width={46}
                           height={46}
-                          fill={"black"}
+                          fill={'black'}
                         />
                       </BlockBtnIcon>
                       <p>Groups</p>
@@ -166,14 +170,14 @@ export const DashboardPage = () => {
                 </BlockMenuBtnAndAcordion>
 
                 <BlockMenuBtnAndAcordion>
-                  <BlockBtn onClick={() => handleToggleMenu("reports")}>
+                  <BlockBtn onClick={() => handleToggleMenu('reports')}>
                     <BlockBtnIconFlex>
                       <BlockBtnIcon>
                         <Icon
                           iconName="icon-reports"
                           width={46}
                           height={46}
-                          fill={"black"}
+                          fill={'black'}
                         />
                       </BlockBtnIcon>
                       <p>Reports</p>
@@ -184,11 +188,11 @@ export const DashboardPage = () => {
                         iconName="icon-arrow"
                         width={14}
                         height={14}
-                        fill={"black"}
+                        fill={'black'}
                       />
                     </button>
                   </BlockBtn>
-                  {isOpen && activeMenu === "reports" && (
+                  {isOpen && activeMenu === 'reports' && (
                     <div>
                       <BlockBtnAcordionGame>test text</BlockBtnAcordionGame>
                       <BlockBtnAcordionGame>test text</BlockBtnAcordionGame>
@@ -197,14 +201,14 @@ export const DashboardPage = () => {
                 </BlockMenuBtnAndAcordion>
 
                 <BlockMenuBtnAndAcordion>
-                  <BlockBtn onClick={() => handleToggleMenu("account")}>
+                  <BlockBtn onClick={() => handleToggleMenu('account')}>
                     <BlockBtnIconFlex>
                       <BlockBtnIconPadding>
                         <Icon
                           iconName="icon-account"
                           width={20}
                           height={20}
-                          fill={"black"}
+                          fill={'black'}
                         />
                       </BlockBtnIconPadding>
                       <p>Account</p>
@@ -215,12 +219,12 @@ export const DashboardPage = () => {
                         iconName="icon-arrow"
                         width={14}
                         height={14}
-                        fill={"black"}
+                        fill={'black'}
                       />
                     </button>
                   </BlockBtn>
 
-                  {isOpen && activeMenu === "account" && (
+                  {isOpen && activeMenu === 'account' && (
                     <div>
                       <BlockBtnAcordionGame>test text</BlockBtnAcordionGame>
                       <BlockBtnAcordionGame>test text</BlockBtnAcordionGame>
@@ -229,14 +233,14 @@ export const DashboardPage = () => {
                 </BlockMenuBtnAndAcordion>
 
                 <BlockMenuBtnAndAcordion>
-                  <BlockBtn onClick={() => handleToggleMenu("game")}>
+                  <BlockBtn onClick={() => handleToggleMenu('game')}>
                     <BlockBtnIconFlex>
                       <BlockBtnIconPadding>
                         <Icon
                           iconName="icon-game"
                           width={24}
                           height={24}
-                          fill={"black"}
+                          fill={'black'}
                         />
                       </BlockBtnIconPadding>
                       <p>Games</p>
@@ -247,14 +251,18 @@ export const DashboardPage = () => {
                         iconName="icon-arrow"
                         width={14}
                         height={14}
-                        fill={"black"}
+                        fill={'black'}
                       />
                     </div>
                   </BlockBtn>
 
-                  {isOpen && activeMenu === "game" && (
+                  {isOpen && activeMenu === 'game' && (
                     <div>
-                      <BlockBtnAcordionGame>Quiz game</BlockBtnAcordionGame>
+                      <BlockBtnAcordionGame
+                        onClick={() => setSelectedGame(true)}
+                      >
+                        Quiz game
+                      </BlockBtnAcordionGame>
                       <BlockBtnAcordionGame>Lorem game</BlockBtnAcordionGame>
                     </div>
                   )}
@@ -291,7 +299,7 @@ export const DashboardPage = () => {
                     iconName="icon-plus"
                     width={17}
                     height={20}
-                    fill={"white"}
+                    fill={'white'}
                   />
                 </BtnAdd>
                 <BtnInfoProfile>
@@ -300,79 +308,91 @@ export const DashboardPage = () => {
               </BlockInfoUser>
             </Header>
 
-            <ContentblockGame>
-              <ContentblockGameHeader>
-                <ContentblockGameHeaderH3>Quiz Game</ContentblockGameHeaderH3>
+            {selectedGame ? (
+              <ContentblockGame>
+                <ContentblockGameHeader>
+                  <ContentblockGameHeaderH3>Quiz Game</ContentblockGameHeaderH3>
 
-                <ContentblockGameHeaderBtn>
-                  <GameHeaderBtnCreateQuest
-                    onClick={() => handleToggleMenu("createQuest")}
-                  >
-                    Questionnaire
-                    <GameHeaderBtnCreateQuestIcon>
-                      <Icon
-                        iconName="icon-arrow"
-                        width={16}
-                        height={16}
-                        fill={"#6A28EA"}
-                      />
+                  <ContentblockGameHeaderBtn>
+                    <GameHeaderBtnCreateQuest
+                      onClick={() => handleToggleMenu('createQuest')}
+                    >
+                      Questionnaire
+                      <GameHeaderBtnCreateQuestIcon>
+                        <Icon
+                          iconName="icon-arrow"
+                          width={16}
+                          height={16}
+                          fill={'#6A28EA'}
+                        />
 
-                      {isOpen && activeMenu === "createQuest" && (
-                        <GameHeaderBtnCreateQuesMenu>
-                          <GameHeaderBtnCreateQuesMenuTitle>
-                            <div>
-                              <Icon
-                                iconName="icon-plus"
-                                width={15}
-                                height={20}
-                                fill={"black"}
-                              />
-                            </div>
-                            Create
-                          </GameHeaderBtnCreateQuesMenuTitle>
+                        {isOpen && activeMenu === 'createQuest' && (
+                          <GameHeaderBtnCreateQuesMenu>
+                            <GameHeaderBtnCreateQuesMenuTitle
+                              onClick={() => setShowModal(true)}
+                            >
+                              <div>
+                                <Icon
+                                  iconName="icon-plus"
+                                  width={15}
+                                  height={20}
+                                  fill={'black'}
+                                />
+                              </div>
+                              Create
+                            </GameHeaderBtnCreateQuesMenuTitle>
 
-                          <GameHeaderBtnCreateQuesMenuTitle>
-                            <div>
-                              <Icon
-                                iconName="icon-edit"
-                                width={15}
-                                height={20}
-                                fill={"black"}
-                              />
-                            </div>
-                            Edit
-                          </GameHeaderBtnCreateQuesMenuTitle>
-                        </GameHeaderBtnCreateQuesMenu>
-                      )}
-                    </GameHeaderBtnCreateQuestIcon>
-                  </GameHeaderBtnCreateQuest>
-                  <GameHeaderBtnCreateRoom>
-                    Create a room
-                  </GameHeaderBtnCreateRoom>
-                </ContentblockGameHeaderBtn>
-              </ContentblockGameHeader>
-              <GameWindowInfo>
-                <GameWindowInfoText>
-                  <GameWindowInfoTextH3>Quiz</GameWindowInfoTextH3>
-                  <GameWindowInfoTextSubtext>
-                    is a game in which players are offered questions on various
-                    topics about the company. Players compete for the correct
-                    answers, trying to score as many points as possible.
-                  </GameWindowInfoTextSubtext>
-                </GameWindowInfoText>
+                            <GameHeaderBtnCreateQuesMenuTitle>
+                              <div>
+                                <Icon
+                                  iconName="icon-edit"
+                                  width={15}
+                                  height={20}
+                                  fill={'black'}
+                                />
+                              </div>
+                              Edit
+                            </GameHeaderBtnCreateQuesMenuTitle>
+                          </GameHeaderBtnCreateQuesMenu>
+                        )}
+                      </GameHeaderBtnCreateQuestIcon>
+                    </GameHeaderBtnCreateQuest>
+                    <GameHeaderBtnCreateRoom>
+                      Create a room
+                    </GameHeaderBtnCreateRoom>
+                  </ContentblockGameHeaderBtn>
+                </ContentblockGameHeader>
+                <GameWindowInfo>
+                  <GameWindowInfoText>
+                    <GameWindowInfoTextH3>Quiz</GameWindowInfoTextH3>
+                    <GameWindowInfoTextSubtext>
+                      is a game in which players are offered questions on
+                      various topics about the company. Players compete for the
+                      correct answers, trying to score as many points as
+                      possible.
+                    </GameWindowInfoTextSubtext>
+                  </GameWindowInfoText>
 
-                <GameWindowInfoClose>
-                  <Icon
-                    iconName="icon-cross"
-                    width={15}
-                    height={20}
-                    fill={"black"}
-                  />
-                </GameWindowInfoClose>
-              </GameWindowInfo>
-              content
-            </ContentblockGame>
-
+                  <GameWindowInfoClose>
+                    <Icon
+                      iconName="icon-cross"
+                      width={15}
+                      height={20}
+                      fill={'black'}
+                    />
+                  </GameWindowInfoClose>
+                </GameWindowInfo>
+                content
+              </ContentblockGame>
+            ) : (
+              <ContentblockGame>
+                <GameWindowInfoTextH3
+                  style={{ textAlign: 'center', verticalAlign: 'center' }}
+                >
+                  Welcome to Trainual
+                </GameWindowInfoTextH3>
+              </ContentblockGame>
+            )}
             <Footter>
               <FootterLogo>
                 <Logo src={logoFotter} alt="Trainual" />
@@ -384,6 +404,11 @@ export const DashboardPage = () => {
           </ContentDashboard>
         </Section>
       </Main>
+      {showModal && (
+        <ModalWrapper onClose={() => setShowModal(false)}>
+          <ModalCreateRoom />
+        </ModalWrapper>
+      )}
     </>
   );
 };
