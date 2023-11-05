@@ -44,7 +44,18 @@ export const CloseBtn = styled.button`
   background: transparent;
 `;
 
-export const Content = styled.div``;
+export const Content = styled.div`
+  max-height: 70vh;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+`;
 
 export const ButtonWrapper = styled.div`
   display: flex;
