@@ -128,7 +128,9 @@ export const QuizGame = () => {
 
         <GameWindowInfoRoom>
           <GameWindowInfoRoomBlockIconText>
-            <GameWindowInfoRoomBlockIcon></GameWindowInfoRoomBlockIcon>
+            <GameWindowInfoRoomBlockIcon>
+              <Icon iconName="icon-game" width={24} height={24} />
+            </GameWindowInfoRoomBlockIcon>
 
             <GameWindowInfoRoomBlockText>
               <GameWindowInfoRoomBlockTextH3>
@@ -172,7 +174,9 @@ export const QuizGame = () => {
 
         <GameWindowInfoRoom>
           <GameWindowInfoRoomBlockIconText>
-            <GameWindowInfoRoomBlockIcon></GameWindowInfoRoomBlockIcon>
+            <GameWindowInfoRoomBlockIcon>
+              <Icon iconName="icon-game" width={24} height={24} />
+            </GameWindowInfoRoomBlockIcon>
 
             <GameWindowInfoRoomBlockText>
               <GameWindowInfoRoomBlockTextH3>
@@ -212,7 +216,9 @@ export const QuizGame = () => {
 
         <GameWindowInfoRoom>
           <GameWindowInfoRoomBlockIconText>
-            <GameWindowInfoRoomBlockIcon></GameWindowInfoRoomBlockIcon>
+            <GameWindowInfoRoomBlockIcon>
+              <Icon iconName="icon-game" width={24} height={24} />
+            </GameWindowInfoRoomBlockIcon>
 
             <GameWindowInfoRoomBlockText>
               <GameWindowInfoRoomBlockTextH3>
@@ -258,7 +264,9 @@ export const QuizGame = () => {
 
         <GameWindowInfoRoom>
           <GameWindowInfoRoomBlockIconText>
-            <GameWindowInfoRoomBlockIcon></GameWindowInfoRoomBlockIcon>
+            <GameWindowInfoRoomBlockIcon>
+              <Icon iconName="icon-game" width={24} height={24} />
+            </GameWindowInfoRoomBlockIcon>
 
             <GameWindowInfoRoomBlockText>
               <GameWindowInfoRoomBlockTextH3>
