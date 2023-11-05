@@ -1027,20 +1027,27 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 `,ob=j.div`
   background-color: #fff;
   border-radius: 10px;
-`,lb="data:image/png;base64,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",sb=()=>{const e=oo();return u.jsx(u.Fragment,{children:u.jsxs(r0,{children:[u.jsxs(Yk,{onClick:()=>e("/dashboard/game"),children:[u.jsx(L,{iconName:"icon-arrow-back",width:"20px",height:"20px"}),"Back to room"]}),u.jsxs(Kk,{children:[u.jsx(Xk,{children:"Edit Questionnaire"}),u.jsx(qk,{children:"Here you can edit and delete the created questionnaires"}),u.jsx(Jk,{children:"4 Questionnaire"}),u.jsxs(Zk,{children:[u.jsx(eb,{children:u.jsxs(tb,{children:[u.jsx(L,{iconName:"icon-arrow",width:"16px",height:"16px"}),u.jsxs("div",{children:[u.jsx(nb,{children:"Company History"}),u.jsx(rb,{children:"Updated November 15, 2023"})]})]})}),u.jsxs(ib,{children:[u.jsx("img",{src:lb,width:24,height:24,alt:"avatar"}),u.jsx(L,{iconName:"icon-more",width:"20px",height:"20px"})]})]}),u.jsx(Yp,{children:u.jsxs(Kp,{children:[u.jsx(L,{iconName:"icon-dots",width:"16px",height:"16px"}),u.jsx(Xp,{children:"Q#1 - What year was our company founded?"}),u.jsxs(qp,{children:[u.jsx(Jp,{children:"5 Answers"}),u.jsx("button",{children:u.jsx(L,{iconName:"icon-delete",width:"16px",height:"16px"})}),u.jsx("button",{children:u.jsx(L,{iconName:"icon-arrow",width:"16px",height:"16px"})})]})]})}),u.jsxs(ob,{children:[u.jsx(Yp,{children:u.jsxs(Kp,{children:[u.jsx(L,{iconName:"icon-dots",width:"16px",height:"16px"}),u.jsx(Xp,{children:"Q#2 - Who was the founder of our company?"}),u.jsxs(qp,{children:[u.jsx(Jp,{children:"3 Answers"}),u.jsx("button",{children:u.jsx(L,{iconName:"icon-delete",width:"16px",height:"16px"})}),u.jsx("button",{children:u.jsx(L,{iconName:"icon-arrow",width:"16px",height:"16px"})})]})]})}),u.jsx("div",{style:{padding:"16px"},children:u.jsxs(xd,{children:[u.jsxs(wd,{children:[u.jsx(tn,{children:"Question"}),u.jsx(Ed,{children:"Who was the founder of our company?"})]}),u.jsxs(Sd,{children:[u.jsx(tn,{children:"Choices"}),u.jsx(Cd,{type:"button",children:"+ Add Option"}),u.jsxs(Yr,{children:[u.jsxs(Kr,{children:[u.jsx("button",{type:"button",children:u.jsx(L,{iconName:"icon-dots",width:16,height:16})}),"John Smith"]}),u.jsx("button",{type:"button",children:u.jsx(L,{iconName:"icon-delete",width:16,height:16})})]}),u.jsxs(Yr,{children:[u.jsxs(Kr,{children:[u.jsx("button",{type:"button",children:u.jsx(L,{iconName:"icon-dots",width:16,height:16})}),"Sarah Johnson"]}),u.jsx("button",{type:"button",children:u.jsx(L,{iconName:"icon-delete",width:16,height:16})})]})]})]})})]}),u.jsxs(i0,{children:[u.jsx(o0,{type:"button",children:"Cancel"}),u.jsx(l0,{type:"button",children:"Save"})]})]})]})})},ab=j.div`
+`,lb="data:image/png;base64,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",sb=()=>{const e=oo();return u.jsx(u.Fragment,{children:u.jsxs(r0,{children:[u.jsxs(Yk,{onClick:()=>e("/dashboard/game"),children:[u.jsx(L,{iconName:"icon-arrow-back",width:"20px",height:"20px"}),"Back to room"]}),u.jsxs(Kk,{children:[u.jsx(Xk,{children:"Edit Questionnaire"}),u.jsx(qk,{children:"Here you can edit and delete the created questionnaires"}),u.jsx(Jk,{children:"4 Questionnaire"}),u.jsxs(Zk,{children:[u.jsx(eb,{children:u.jsxs(tb,{children:[u.jsx(L,{iconName:"icon-arrow",width:"16px",height:"16px"}),u.jsxs("div",{children:[u.jsx(nb,{children:"Company History"}),u.jsx(rb,{children:"Updated November 15, 2023"})]})]})}),u.jsxs(ib,{children:[u.jsx("img",{src:lb,width:24,height:24,alt:"avatar"}),u.jsx(L,{iconName:"icon-more",width:"20px",height:"20px"})]})]}),u.jsx(Yp,{children:u.jsxs(Kp,{children:[u.jsx(L,{iconName:"icon-dots",width:"16px",height:"16px"}),u.jsx(Xp,{children:"Q#1 - What year was our company founded?"}),u.jsxs(qp,{children:[u.jsx(Jp,{children:"5 Answers"}),u.jsx("button",{children:u.jsx(L,{iconName:"icon-delete",width:"16px",height:"16px"})}),u.jsx("button",{children:u.jsx(L,{iconName:"icon-arrow",width:"16px",height:"16px"})})]})]})}),u.jsxs(ob,{children:[u.jsx(Yp,{children:u.jsxs(Kp,{children:[u.jsx(L,{iconName:"icon-dots",width:"16px",height:"16px"}),u.jsx(Xp,{children:"Q#2 - Who was the founder of our company?"}),u.jsxs(qp,{children:[u.jsx(Jp,{children:"3 Answers"}),u.jsx("button",{children:u.jsx(L,{iconName:"icon-delete",width:"16px",height:"16px"})}),u.jsx("button",{children:u.jsx(L,{iconName:"icon-arrow",width:"16px",height:"16px"})})]})]})}),u.jsx("div",{style:{padding:"16px"},children:u.jsxs(xd,{children:[u.jsxs(wd,{children:[u.jsx(tn,{children:"Question"}),u.jsx(Ed,{children:"Who was the founder of our company?"})]}),u.jsxs(Sd,{children:[u.jsx(tn,{children:"Choices"}),u.jsx(Cd,{type:"button",children:"+ Add Option"}),u.jsxs(Yr,{children:[u.jsxs(Kr,{children:[u.jsx("button",{type:"button",children:u.jsx(L,{iconName:"icon-dots",width:16,height:16})}),"John Smith"]}),u.jsx("button",{type:"button",children:u.jsx(L,{iconName:"icon-delete",width:16,height:16})})]}),u.jsxs(Yr,{children:[u.jsxs(Kr,{children:[u.jsx("button",{type:"button",children:u.jsx(L,{iconName:"icon-dots",width:16,height:16})}),"Sarah Johnson"]}),u.jsx("button",{type:"button",children:u.jsx(L,{iconName:"icon-delete",width:16,height:16})})]})]})]})})]}),u.jsxs(i0,{children:[u.jsx(o0,{type:"button",children:"Cancel"}),u.jsx(l0,{type:"button",children:"Save"})]})]})]})})},ab="/trainual-game-front/assets/game-25feaeda.png",ub=j.div`
   display: flex;
   align-items: start;
   height: calc(100vh - 120px);
-`,ub=j.div`
-  width: 100%;
 `,cb=j.div`
+  width: 100%;
+`,db=j.div`
+width: 100%;
+height: 100vh;
+    background: url(${ab}) no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    background-position-y: top;
+`,fb=j.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   padding: 4px 16px 4px 40px;
   background: #ffe289;
-`,db=j.div`
+`,pb=j.div`
   display: flex;
   align-items: center;
   gap: 4px;
@@ -1052,7 +1059,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   align-items: center;
   border-radius: 6px;
   background: #fff;
-`,fb=j.div`
+`,hb=j.div`
   display: flex;
   max-width: 328px;
   width: 100%;
@@ -1060,28 +1067,28 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   flex-direction: column;
   align-items: center;
   background: linear-gradient(0deg, #fff 0%, #fff 100%), rgba(0, 0, 0, 0.2);
-`,pb=j.div`
+`,mb=j.div`
   width: 100%;
   display: flex;
   justify-content: space-between;
   padding: 9px 16px 41px;
-`,hb=j.h3`
+`,gb=j.h3`
   font-family: Poppins;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
   line-height: 150%;
-`,mb=j.div`
+`,vb=j.div`
   width: 100%;
   height: 100vh;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
-`,gb=j.div`
+`,yb=j.div`
   display: flex;
   flex-direction: column;
   padding: 0 16px;
-`,vb=j.div`
+`,xb=j.div`
   display: flex;
   flex-direction: column;
   align-items: end;
@@ -1120,7 +1127,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   font-weight: 500;
   line-height: 150%; /* 15px */
   letter-spacing: 0.5px;
-`,yb=j.div`
+`,wb=j.div`
   display: flex;
   flex-direction: column;
   align-items: start;
@@ -1133,13 +1140,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   border-radius: 16px 16px 16px 0px;
   background: #f8f8f9;
   margin-bottom: 16px;
-`,xb=j.div`
+`,Sb=j.div`
   display: flex;
   width: 100%;
   padding: 10px 16px;
   align-items: center;
   gap: 12px;
-`,wb=j.input`
+`,Eb=j.input`
 width: 100%;
   display: flex;
   padding: 6px 8px;
@@ -1149,4 +1156,4 @@ width: 100%;
   border-radius: 12px;
   background: #f5f7f8;
   border: none;
-`,Sb=()=>u.jsx(u.Fragment,{children:u.jsxs(ab,{children:[u.jsx(ub,{children:u.jsxs(cb,{children:[u.jsx("div",{children:"QUIZ Game"}),u.jsxs(db,{children:[u.jsx(Zp,{children:"0/10"}),u.jsxs(Zp,{children:[u.jsx("div",{children:u.jsx(L,{iconName:"icon-star",width:24,height:24})}),u.jsx("div",{children:"00000"})]})]})]})}),u.jsxs(fb,{children:[u.jsxs(pb,{children:[u.jsx(hb,{children:"Game chat"}),u.jsx("button",{children:u.jsx(L,{iconName:"icon-question",width:24,height:24})})]}),u.jsxs(mb,{children:[u.jsxs(gb,{children:[u.jsxs(vb,{children:[u.jsxs(eh,{children:[u.jsx(Xo,{children:"Does anyone remember what year?"}),u.jsxs(qo,{children:[u.jsx(Jo,{children:"16:46"}),u.jsx(Zo,{children:"You"})]})]}),u.jsxs(eh,{children:[u.jsx(Xo,{children:"I don't remember"}),u.jsxs(qo,{children:[u.jsx(Jo,{children:"16:46"}),u.jsx(Zo,{children:"You"})]})]})]}),u.jsxs(yb,{children:[u.jsxs(th,{children:[u.jsx(Xo,{children:"I remember hearing that our company was founded in 2010"}),u.jsxs(qo,{children:[u.jsx(Jo,{children:"16:47"}),u.jsx(Zo,{children:"Bessie"})]})]}),u.jsxs(th,{children:[u.jsx(Xo,{children:"2005, seems like the correct answer to me"}),u.jsxs(qo,{children:[u.jsx(Jo,{children:"16:47"}),u.jsx(Zo,{children:"Marvin"})]})]})]})]}),u.jsxs(xb,{children:[u.jsx("div",{children:u.jsx(L,{iconName:"icon-question",width:24,height:24})}),u.jsx(wb,{type:"text"}),u.jsx("button",{children:u.jsx(L,{iconName:"icon-question",width:24,height:24})})]})]})]})]})}),Eb=()=>u.jsx(u.Fragment,{children:u.jsx(C.Suspense,{fallback:u.jsx("div",{children:"Loading..."}),children:u.jsxs(Rw,{children:[u.jsx(Un,{path:"/",element:u.jsx(hp,{})}),u.jsx(Un,{path:"/login",element:u.jsx(hp,{})}),u.jsxs(Un,{path:"/dashboard",element:u.jsx(DS,{}),children:[u.jsx(Un,{path:"edit",element:u.jsx(sb,{})}),u.jsx(Un,{path:"game",element:u.jsx(Gk,{})}),u.jsx(Un,{path:"table",element:u.jsx(Sb,{})})]})]})})}),Cb=j.main``,kb=()=>u.jsx(u.Fragment,{children:u.jsx(Cb,{children:u.jsx(Eb,{})})});function bb(){return u.jsxs(u.Fragment,{children:[u.jsx(kb,{}),u.jsx($x,{})]})}za.createRoot(document.getElementById("root")).render(u.jsx(Te.StrictMode,{children:u.jsx(Mw,{basename:"/trainual-game-front",children:u.jsx(bb,{})})}));
+`,Cb=()=>u.jsx(u.Fragment,{children:u.jsxs(ub,{children:[u.jsxs(cb,{children:[u.jsxs(fb,{children:[u.jsx("div",{children:"QUIZ Game"}),u.jsxs(pb,{children:[u.jsx(Zp,{children:"0/10"}),u.jsxs(Zp,{children:[u.jsx("div",{children:u.jsx(L,{iconName:"icon-star",width:24,height:24})}),u.jsx("div",{children:"00000"})]})]})]}),u.jsx(db,{})]}),u.jsxs(hb,{children:[u.jsxs(mb,{children:[u.jsx(gb,{children:"Game chat"}),u.jsx("button",{children:u.jsx(L,{iconName:"icon-logout",width:24,height:24})})]}),u.jsxs(vb,{children:[u.jsxs(yb,{children:[u.jsxs(xb,{children:[u.jsxs(eh,{children:[u.jsx(Xo,{children:"Does anyone remember what year?"}),u.jsxs(qo,{children:[u.jsx(Jo,{children:"16:46"}),u.jsx(Zo,{children:"You"})]})]}),u.jsxs(eh,{children:[u.jsx(Xo,{children:"I don't remember"}),u.jsxs(qo,{children:[u.jsx(Jo,{children:"16:46"}),u.jsx(Zo,{children:"You"})]})]})]}),u.jsxs(wb,{children:[u.jsxs(th,{children:[u.jsx(Xo,{children:"I remember hearing that our company was founded in 2010"}),u.jsxs(qo,{children:[u.jsx(Jo,{children:"16:47"}),u.jsx(Zo,{children:"Bessie"})]})]}),u.jsxs(th,{children:[u.jsx(Xo,{children:"2005, seems like the correct answer to me"}),u.jsxs(qo,{children:[u.jsx(Jo,{children:"16:47"}),u.jsx(Zo,{children:"Marvin"})]})]})]})]}),u.jsxs(Sb,{children:[u.jsx("div",{children:u.jsx(L,{iconName:"icon-mic",width:24,height:24})}),u.jsx(Eb,{type:"text"}),u.jsx("button",{children:u.jsx(L,{iconName:"icon-send",width:24,height:24})})]})]})]})]})}),kb=()=>u.jsx(u.Fragment,{children:u.jsx(C.Suspense,{fallback:u.jsx("div",{children:"Loading..."}),children:u.jsxs(Rw,{children:[u.jsx(Un,{path:"/",element:u.jsx(hp,{})}),u.jsx(Un,{path:"/login",element:u.jsx(hp,{})}),u.jsxs(Un,{path:"/dashboard",element:u.jsx(DS,{}),children:[u.jsx(Un,{path:"edit",element:u.jsx(sb,{})}),u.jsx(Un,{path:"game",element:u.jsx(Gk,{})}),u.jsx(Un,{path:"table",element:u.jsx(Cb,{})})]})]})})}),bb=j.main``,jb=()=>u.jsx(u.Fragment,{children:u.jsx(bb,{children:u.jsx(kb,{})})});function Pb(){return u.jsxs(u.Fragment,{children:[u.jsx(jb,{}),u.jsx($x,{})]})}za.createRoot(document.getElementById("root")).render(u.jsx(Te.StrictMode,{children:u.jsx(Mw,{basename:"/trainual-game-front",children:u.jsx(Pb,{})})}));
