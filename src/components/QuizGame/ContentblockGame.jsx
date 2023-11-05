@@ -34,11 +34,13 @@ import {
 } from './ContentblockGame.styled';
 import { ModalWrapper } from '../../shared/components/ModalWrapper/ModalWrapper';
 import { ModalCreateRoom } from '../ModalCreateRoom/ModalCreateRoom';
+import { ModalCreateQuestionnaire } from '../ModalCreateQuestionnaire/ModalCreateQuestionnaire';
 
 export const QuizGame = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [activeMenu, setActiveMenu] = useState(null);
-  const [showModal, setShowModal] = useState(false);
+  const [showModalRoom, setShowModalRoom] = useState(false);
+  const [showModalQuestionnaire, setShowModalQuestionnaire] = useState(false);
 
   const navigate = useNavigate();
 
@@ -73,7 +75,9 @@ export const QuizGame = () => {
 
                 {isOpen && activeMenu === 'createQuest' && (
                   <GameHeaderBtnCreateQuesMenu>
-                    <GameHeaderBtnCreateQuesMenuTitle>
+                    <GameHeaderBtnCreateQuesMenuTitle
+                      onClick={() => setShowModalQuestionnaire(true)}
+                    >
                       <div>
                         <Icon
                           iconName="icon-plus"
@@ -102,7 +106,7 @@ export const QuizGame = () => {
                 )}
               </GameHeaderBtnCreateQuestIcon>
             </GameHeaderBtnCreateQuest>
-            <GameHeaderBtnCreateRoom onClick={() => setShowModal(true)}>
+            <GameHeaderBtnCreateRoom onClick={() => setShowModalRoom(true)}>
               Create a room
             </GameHeaderBtnCreateRoom>
           </ContentblockGameHeaderBtn>
@@ -296,9 +300,14 @@ export const QuizGame = () => {
           </GameWindowInfoRoomBlockLead>
         </GameWindowInfoRoom>
       </ContentblockGame>
-      {showModal && (
-        <ModalWrapper onClose={() => setShowModal(false)}>
+      {showModalRoom && (
+        <ModalWrapper onClose={() => setShowModalRoom(false)}>
           <ModalCreateRoom />
+        </ModalWrapper>
+      )}
+      {showModalQuestionnaire && (
+        <ModalWrapper onClose={() => setShowModalQuestionnaire(false)}>
+          <ModalCreateQuestionnaire />
         </ModalWrapper>
       )}
     </>

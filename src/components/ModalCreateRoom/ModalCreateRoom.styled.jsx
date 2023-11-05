@@ -36,7 +36,7 @@ export const Label = styled.label`
 
 export const InputRoom = styled.input`
   width: 100%;
-  padding: 6px 16px;
+  padding: 10px 16px;
 
   border-radius: 4px;
   border: 1px solid #e3e3e3;
@@ -90,6 +90,7 @@ export const QuestionSubTitleContainer = styled.div`
   display: flex;
   flex-direction: column;
   gap: 8px;
+  margin-top: 16px;
 
   width: 100%;
 `;

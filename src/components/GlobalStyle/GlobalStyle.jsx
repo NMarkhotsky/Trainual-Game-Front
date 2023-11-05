@@ -11,6 +11,16 @@ body {
 
   background-color: #F9F9F9;
 
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: transparent;
+  }
+
 }
 
 code {
