@@ -3,7 +3,7 @@ import background from "../../assets/img/Background.png";
 
 export const ContentblockGame = styled.div`
   width: 100%;
-  height: 100vh;
+  height: calc(100% - 120px);
   min-height: fit-content;
   display: flex;
   padding: 32px 40px 128px 40px;

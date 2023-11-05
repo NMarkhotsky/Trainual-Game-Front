@@ -263,6 +263,7 @@ export const DashboardPage = () => {
           </BlockLinkFriends>
         </Nav>
         <ContentDashboard>
+          <div>
           <Header>
             <BlockSearch>
               <IconSearch>
@@ -293,6 +294,8 @@ export const DashboardPage = () => {
             </BlockInfoUser>
           </Header>
           <Outlet />
+          </div>
+          
           <Footer>
             <FooterLogo>
               <Logo src={logoFotter} alt="Trainual" />

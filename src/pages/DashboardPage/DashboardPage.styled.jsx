@@ -172,7 +172,6 @@ export const BlockLinkFriendsBtn = styled.a`
 
 export const ContentDashboard = styled.div`
   width: 100%;
-  height: 100vh;
   min-height: fit-content;
   display: flex;
   flex-direction: column;
@@ -285,6 +284,8 @@ export const Footer = styled.footer`
   min-height: 60px;
   padding: 14.75px 39.33px 14.75px 24px;
   align-items: center;
+  background-color: white;
+  border-top: 1px solid #f1f1f1;
 `;
 
 export const FooterLogo = styled.div`
