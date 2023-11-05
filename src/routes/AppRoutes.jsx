@@ -4,6 +4,7 @@ import { LoginPage } from '../pages/LoginPage/LoginPage';
 import { DashboardPage } from '../pages/DashboardPage/DashboardPage';
 import { QuizGame } from '../components/QuizGame/ContentblockGame';
 import { EditQuestionnaire } from '../components/EditQuestionnaire/EditQuestionnaire';
+import { TableGame } from '../components/TableGame/TableGame';
 
 export const AppRoutes = () => {
   return (
@@ -15,6 +16,7 @@ export const AppRoutes = () => {
           <Route path="/dashboard" element={<DashboardPage />}>
             <Route path="edit" element={<EditQuestionnaire />} />
             <Route path="game" element={<QuizGame />} />
+            <Route path="table" element={<TableGame />} />
           </Route>
         </Routes>
       </Suspense>

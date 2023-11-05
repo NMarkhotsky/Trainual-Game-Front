@@ -5,9 +5,11 @@ export const EditQuestionnaire = () => {
 
   return (
     <>
-      <button onClick={() => navigate('/dashboard/game')}>Back</button>
-
-      <h1>Edit</h1>
+      <button onClick={() => navigate('/dashboard/game')}>Back to room</button>
+      <div>
+        <h2>Edit Questionnaire</h2>
+        <p>Here you can edit and delete the created questionnaires</p>
+      </div>
     </>
   );
 };
