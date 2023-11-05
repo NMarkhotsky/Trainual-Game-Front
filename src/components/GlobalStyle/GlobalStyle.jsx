@@ -10,6 +10,7 @@ body {
   text-rendering: optimizeSpeed;
 
   background-color: #F9F9F9;
+
 }
 
 code {
