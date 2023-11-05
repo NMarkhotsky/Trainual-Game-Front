@@ -689,7 +689,6 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  gap: 16px;
   padding: 10px;
   height: 100%;
 
