@@ -2,6 +2,7 @@ import { Suspense } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import { LoginPage } from '../pages/LoginPage/LoginPage';
 import { DashboardPage } from '../pages/DashboardPage/DashboardPage';
+import { QuizGame } from '../components/QuizGame/ContentblockGame';
 
 export const AppRoutes = () => {
   return (
@@ -10,7 +11,10 @@ export const AppRoutes = () => {
         <Routes>
           <Route path="/" element={<LoginPage />} />
           <Route path="/login" element={<LoginPage />} />
-          <Route path="/dashboard" element={<DashboardPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} >
+            <Route path='edit' element={''}/>
+            <Route path='game' element={<QuizGame/>}/>
+          </Route>
         </Routes>
       </Suspense>
     </>
